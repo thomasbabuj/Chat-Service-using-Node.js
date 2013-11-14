@@ -10,7 +10,7 @@
 
 */
 	/// Including Express 
-	var express = require("express"), app  = express.createServer();
+	var express = require("express"), app  = express();
 	//  Including Jade
 	var jade = require('jade');
 	//  Including Socket.io
