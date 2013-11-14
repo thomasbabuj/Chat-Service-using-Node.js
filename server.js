@@ -14,7 +14,10 @@
 	//  Including Jade
 	var jade = require('jade');
 	//  Including Socket.io
-	var io = require('socket.io').listen(app);
+	var server = http.createServer(express);
+	var io = require('socket.io').listen(server);
+
+
 
 	// To change express to serve like a client webserver adding public folder which contains JS/CSS/Image files
 
