@@ -6,6 +6,7 @@
 		3)  Creating a Jade Temlate page
 		4)  Add our Response HTML file
 		5)  Socket.io Server side configuration
+		6)  Socket.io Client side configuration
 
 */
 	/// Including Express 
