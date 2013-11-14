@@ -11,6 +11,8 @@
 	var express = require("express"), app  = express.createServer();
 	//  Including Jade
 	var jade = require('jade');
+	//  Including Socket.io
+	var io = require('socket.io').listen(app);
 
 	// To change express to serve like a client webserver adding public folder which contains JS/CSS/Image files
 
@@ -28,5 +30,22 @@
 	});
 	app.listen(3000);
 
+	// Initializing the socket.io connection
+	//  first arugument is event
+	//  second argument is callback function
+	io.sockets.on('connection', function(socket){  
+		// Adding "pseudo" events
+		socket.on('setPseudo', function(data) {
+			socket.set('pseduo', data);
+		});
 
+		socket.on('message', function(message){
+			socket.get('pseduo', function(error, name) {
+				var data = {'message' : message, pseduo : name};
+				socket.broadcast.emit('message', data);
+				console.log (" User " + name + "Send this : " + message );
+			})
+		})
+
+	});
 
