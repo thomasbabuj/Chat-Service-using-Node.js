@@ -3,9 +3,13 @@
 
 		1)  Serving a single static page using Express
 		2)  Config Express to serve page from the repo views with the jade temmplating
-*/
+		3)  Creating a Jade Temlate page
 
+*/
+	/// Including Express 
 	var express = require("express"), app  = express.createServer();
+	//  Including Jade
+	var jade = require('jade');
 
 	// To change express to serve like a client webserver adding public folder which contains JS/CSS/Image files
 
