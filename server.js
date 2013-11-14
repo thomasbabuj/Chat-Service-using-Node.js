@@ -14,7 +14,7 @@
 	//  Including Jade
 	var jade = require('jade');
 	//  Including Socket.io
-	var server = http.createServer(express);
+	var server = app.createServer(express);
 	var io = require('socket.io').listen(server);
 
 
