@@ -4,6 +4,7 @@
 		1)  Serving a single static page using Express
 		2)  Config Express to serve page from the repo views with the jade temmplating
 		3)  Creating a Jade Temlate page
+		4)  Add our Response HTML file
 
 */
 	/// Including Express 
