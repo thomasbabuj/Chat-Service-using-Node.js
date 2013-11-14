@@ -9,6 +9,8 @@
 		6)  Socket.io Client side configuration
 
 */
+	
+	/*
 	/// Including Express 
 	var express = require("express"), app  = express();
 	//  Including Jade
@@ -16,6 +18,14 @@
 	//  Including Socket.io
 	var server = app.createServer(express);
 	var io = require('socket.io').listen(server);
+	*/
+
+	var jade = require('jade');
+	var express = require("express");
+	var app = express()
+		, http = require('http')
+		, server = http.createServer( app )
+		, io = require('socket.io').listen(server);
 
 
 
